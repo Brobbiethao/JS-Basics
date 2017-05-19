@@ -5,25 +5,39 @@ var name = 'Tyler';
 //If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 
   //Code Here
+    function isTyler(name) {
+      if(name === "Tyler") {
+        return true;
+      } else {
+        return false;
+      }
+    };
+
+
+
+
 
 //////////////////PROBLEM 2////////////////////
 
 
 //Create a function called getName that uses prompt() to prompt the user for their name, then returns the name.
+    function getName() {
+      var name = prompt("Name?");
+      return name;
+    }
 
-
+    getName();
   //Code Here
-
-
 //////////////////PROBLEM 3////////////////////
 
 
 
 //Create a function called welcome that uses your getName function you created in the previous problem to get the users name,
 //then alerts "Welcome, " plus whatever the users name is.
-
+  function welcome() {
+    return alert("Welcome, " + getName());
+  }
   //Code Here
-
 
 //////////////////PROBLEM 4////////////////////
 
@@ -33,7 +47,7 @@ var name = 'Tyler';
 //What is the difference between arguments and parameters?
 
   //Answer Here
-
+  //arguments and parameter both hold variables however parameter can be part of/or the product of a function.
 
 //////////////////PROBLEM 5////////////////////
 
@@ -43,7 +57,8 @@ var name = 'Tyler';
 
 
   //Answer Here
-
+//0, undefined, null, false, Nan, ""
+//if an element is === to one of the above, falsey will return the condiction of false.
 
 
 //////////////////PROBLEM 6////////////////////
@@ -53,15 +68,17 @@ var name = 'Tyler';
 //Create a function called myName that returns your name
 
   //Code Here
-  
-
+  function myName() {
+    var name = "Brobbie"
+    return name;
+  }
 
 //Now save the function definition of myName into a new variable called newMyName
-
+  var newMyName = myName;
   //Code Here
 
 //Now alert the result of invoking newMyName
-
+  alert(newMyName());
 
 
 //////////////////PROBLEM 7////////////////////
@@ -71,9 +88,12 @@ var name = 'Tyler';
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
-
+  function outerFn() {
+    return newMyName;
+  }
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
-
+  var innerFn = outerFn();
 //Now invoke innerFn.
+  innerFn();
